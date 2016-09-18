@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:DelSole.XamUtilities.Behaviors;assembly=DelSole.XamUtilities"
+             xmlns:styles="clr-namespace:DelSole.XamUtilities.Styles;assembly=DelSole.XamUtilities"
+             x:Class="DelSole.XamUtilities.Samples.Validation.ValidationPage">
+  <ContentPage.Resources>
+    <ResourceDictionary MergedWith="styles:SharedResources" />
+  </ContentPage.Resources>
+  
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <Entry Text="{Binding Name, Mode=TwoWay}" WidthRequest="250">
+      <Entry.Behaviors>
+        <behaviors:FieldEmptyValidatorBehavior x:Name="StringEmptyValidator" />
+        <behaviors:FieldLengthValidatorBehavior MaxLength="255" />
+      </Entry.Behaviors>
+    </Entry>
+    <Label Style="{Binding Source={x:Reference StringEmptyValidator}, 
+                        Path=IsValid, 
+                        Converter={StaticResource boolToStringEmpty}}" />
+  </StackLayout>
+</ContentPage>

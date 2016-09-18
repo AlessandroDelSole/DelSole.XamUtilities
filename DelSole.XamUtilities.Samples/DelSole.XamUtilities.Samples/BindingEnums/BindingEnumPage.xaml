@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:DelSole.XamUtilities.Converters;assembly=DelSole.XamUtilities"
+             xmlns:controls="clr-namespace:DelSole.XamUtilities.Controls;assembly=DelSole.XamUtilities"
+             xmlns:enums="clr-namespace:DelSole.XamUtilities.Samples;assembly=DelSole.XamUtilities.Samples"
+             x:Class="DelSole.XamUtilities.Samples.BindingEnums.BindingEnumPage">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+    <controls:EnumBindablePicker x:TypeArguments="enums:RolesEnum" SelectedItem="{Binding Role, Mode=TwoWay}" Title="Role of employee"/>
+    <Label Text="{Binding Role, Converter={StaticResource EnumToStringConverter}}"/>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:converters="clr-namespace:DelSole.XamUtilities.Converters;assembly=DelSole.XamUtilities"
+                     x:Class="DelSole.XamUtilities.Styles.SharedResources">
+  <!-- Pre-validation style -->
+  <Style x:Key="baseStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="Small" />
+    <Setter Property="FontAttributes" Value="Italic" />
+  </Style>
+
+  <converters:BoolToObjectConverter x:Key="boolToStringEmpty"
+                                   x:TypeArguments="Style">
+    <converters:BoolToObjectConverter.FalseObject>
+      <Style TargetType="Label" BasedOn="{StaticResource baseStyle}">
+        <Setter Property="TextColor" Value="Red" />
+        <Setter Property="Text" Value="Field cannot be empty" />
+      </Style>
+    </converters:BoolToObjectConverter.FalseObject>
+
+    <converters:BoolToObjectConverter.TrueObject>
+      <Style TargetType="Label" BasedOn="{StaticResource baseStyle}">
+        <Setter Property="TextColor" Value="Default" />
+        <Setter Property="Text" Value="" />
+      </Style>
+    </converters:BoolToObjectConverter.TrueObject>
+  </converters:BoolToObjectConverter>
+</ResourceDictionary>
