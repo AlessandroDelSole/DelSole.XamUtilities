@@ -2,6 +2,7 @@
 A collection of controls, behaviors, and converters for Xamarin.Forms. 
 
 [![](https://img.shields.io/badge/nuget-v1.0.0-blue.svg)](https://www.nuget.org/packages/DelSole.XamUtilities/1.0.0)
+![](https://img.shields.io/badge/release-stable-brightgreen.svg)]
 
 ## Requirements
 
