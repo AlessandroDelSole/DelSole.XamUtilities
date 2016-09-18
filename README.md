@@ -1,6 +1,8 @@
 # DelSole.XamUtilities
 A collection of controls, behaviors, and converters for Xamarin.Forms. 
 
+[![](https://img.shields.io/badge/nuget-v1.0.0-blue.svg)](https://www.nuget.org/packages/DelSole.XamUtilities/1.0.0)
+
 ## Requirements
 
 DelSole.XamUtilities requires at least Xamarin.Forms v. 2.3.0.49 and does not support Windows Phone 8.1 and Windows 8.1. The reason is that, behind the scenes, it requires the System.ComponentModel.Annotation library that is not supported on these platforms.
