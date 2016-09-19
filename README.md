@@ -8,6 +8,12 @@ A collection of controls, behaviors, and converters for Xamarin.Forms.
 
 DelSole.XamUtilities requires at least Xamarin.Forms v. 2.3.0.49 and does not support Windows Phone 8.1 and Windows 8.1. The reason is that, behind the scenes, it requires the System.ComponentModel.Annotation library that is not supported on these platforms.
 
+## Download and installation
+
+DelSole.XamUtilities is available as a [NuGet package](https://www.nuget.org/packages/DelSole.XamUtilities/1.0.0) that you can download from Visual Studio.
+
+Install the library **only to the PCL Portable Class Library**. Installing the library to platform projects will result in an error on the Universal Windows Platform project and is actually an unnecessary step.
+
 Following is a list of goodies you will find in the library:
 
 ## Controls
@@ -37,6 +43,4 @@ The **SharedResources.xaml** resource dictionary contains a couple of styles tha
 
 The solution contains a companion sample app that demonstrates how to use controls, converters, and behaviors. Check it out, it's really easy to use!
 
-## Downloads
 
-DelSole.XamUtilities is available as a [NuGet package](https://www.nuget.org/packages/DelSole.XamUtilities/1.0.0) that you can download from Visual Studio. 
